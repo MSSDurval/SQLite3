@@ -4,7 +4,7 @@ try:
     conexao = conector.connect("BancoDados.db")
     cursor = conexao.cursor()
 
-    comando = '''SELECT nome, oculos FROM Pessoa;'''
+    comando = '''SELECT nome, oculos FROM tabela;'''
 
     cursor.execute(comando)
     conexao.commit()
