@@ -1,10 +1,14 @@
 import sqlite3 as conector
 
 try:
-    conexao = conector.connect("BancoDados.db")
+    conexao = conector.connect("BancoDeDados.db")
     cursor = conexao.cursor()
 
-    comando = '''SELECT nome, oculos FROM tabela;'''
+    comando = ('''CREATE TABLE TabelaExemplo(
+        id INTEGER PRIMARY KEY,
+        nome TEXT,
+        email TEXT
+    );''')
 
     cursor.execute(comando)
     conexao.commit()
